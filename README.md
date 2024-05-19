@@ -1,1 +1,1 @@
-# craco-boilerplate-script-
+# craco-boilerplate-script
