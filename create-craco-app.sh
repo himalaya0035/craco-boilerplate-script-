@@ -47,11 +47,11 @@ config_string="module.exports = {"
 # Add alias imports if selected
 if [[ "$ALIAS_IMPORTS" == "y" || "$ALIAS_IMPORTS" == "Y" ]]; then
   config_string+="webpack: { alias: { '@': require('path').resolve(__dirname, 'src') }},
-  devServer: { open: $OPEN_BROWSER_FLAG, port: $DEV_PORT }}
-  // append your customisations here
-  "
+  devServer: { open: $OPEN_BROWSER_FLAG, port: $DEV_PORT }
+    // append your customisations here
+  }"
 else
-  config_string+="devServer: { open: $OPEN_BROWSER_FLAG, port: $DEV_PORT }}"
+  config_string+="devServer: { open: $OPEN_BROWSER_FLAG, port: $DEV_PORT } // append your customisations here}"
 fi
 
 echo "$config_string" > "craco.config.js"
